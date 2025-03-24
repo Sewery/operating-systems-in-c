@@ -4,3 +4,7 @@ This repository contains solutions for laboratories exercises in Operating Syste
  - [lab 1](./lab-1)
 ## Libraries - Static, Shared, Dynamic
  - [lab 2](./lab-2)
+## File system, file operations
+ - [lab 3](./lab-3)
+## Process creation. Process environment, process control
+ - [lab 4](./lab-4)

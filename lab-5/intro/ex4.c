@@ -3,6 +3,8 @@
 #include <sys/types.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <bits/types/sigset_t.h>
+#include <bits/sigaction.h>
 
 void obsulga_v1(int signum, siginfo_t * si,void * p3){
     printf("Obsluga sygnalu v1: %d %d, war%d\n",si->si_pid,si->si_uid,si->si_value);

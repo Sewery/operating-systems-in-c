@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <signal.h> 
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <bits/sigaction.h>
+#include <bits/types/sigset_t.h>
+
 
 
 int main(void){

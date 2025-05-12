@@ -16,3 +16,5 @@ This repository contains solutions for laboratories exercises in Operating Syste
  - [lab 7](./lab-7)
 ## Semaphores
  - [lab 8](./lab-8)
+## Threads
+ - [lab 9](./lab-9)

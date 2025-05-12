@@ -12,5 +12,7 @@ This repository contains solutions for laboratories exercises in Operating Syste
  - [lab 5](./lab-5)
 ## Streams
  - [lab 6](./lab-6)
- ## Message queues
+## Message queues
  - [lab 7](./lab-7)
+## Semaphores
+ - [lab 8](./lab-8)

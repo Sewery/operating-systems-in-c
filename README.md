@@ -18,3 +18,5 @@ This repository contains solutions for laboratories exercises in Operating Syste
  - [lab 8](./lab-8)
 ## Threads
  - [lab 9](./lab-9)
+## Mutexes
+ - [lab 10](./lab-10)

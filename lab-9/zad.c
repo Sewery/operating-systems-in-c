@@ -32,9 +32,11 @@ struct pakiet{
     double to;
 };
 void * fun_watka(void * val){
-    struct pakiet pak = *(struct pakiet*)val;
-    double part_res = integrate(pak.from,pak.to);
-    wynik[pak.id_watka]=part_res;
+    struct pakiet * pak = (struct pakiet*)val;
+    double part_res = integrate(pak->from,pak->to);
+    wynik[pak->id_watka]=part_res;
+    // sleep(1);
+    free(pak);
 }
 int main(int argc, char *argv[]) {
      if (argc != 3) {
@@ -49,14 +51,16 @@ int main(int argc, char *argv[]) {
         clock_gettime(CLOCK_REALTIME, &start_time);
         double result=0.0;
         double part=1.0/k;
+        pthread_t watki[k];
         for(int i=0;i<k;i++){
-            pthread_t watek;
-            struct pakiet ob;
-            ob.id_watka=i;
-            ob.from =part*i;
-            ob.to =part*(i+1);
-            (void) pthread_create(&watek, NULL, &fun_watka, (void*)&ob);    
-            pthread_join(watek,NULL);
+            struct pakiet * ob = malloc(sizeof(struct pakiet));
+            ob->id_watka=i;
+            ob->from =part*i;
+            ob->to =part*(i+1);
+            (void) pthread_create(&watki[i], NULL, &fun_watka, (void*)ob);    
+        }
+        for(int i=0;i<k;i++){
+            pthread_join(watki[i],NULL);
         }
         for(int i=0;i<k;i++){
             result+=wynik[i];

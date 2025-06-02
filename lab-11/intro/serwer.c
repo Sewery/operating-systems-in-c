@@ -4,7 +4,6 @@
 #include <arpa/inet.h>
 #include <string.h>
 #include <unistd.h>
-
 int main(void){
     int status, gniazdo, dlugosc, nr=0, end=1, gniazdo2;
     struct sockaddr_in ser, cli;

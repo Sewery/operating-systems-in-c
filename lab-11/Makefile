@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-g -Wall
+CFLAGS=-g -Wall -lpthread
 all: klient serwer
 klient: klient.c
 	$(CC) $(CFLAGS) klient.c -o klient
